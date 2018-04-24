@@ -1,0 +1,445 @@
+
+@import 'colors'
+
+// @font-face
+//     font-family: NeutraCondensedMedium
+//     src: url('../fonts/Neutraface Condensed Medium.otf')
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Pompiere:300,400,600')
+@font-face
+    src: url('../fonts/NimbusRoman.otf')
+    font-family: NimbusRoman
+
+
+$mobileNavbarHeight: 60px
+
+
+html, body
+    margin: 0
+
+body
+    background-color: #fff
+    font-family: 'Pompiere', 'Montserrat', Helvetica, sans-serif
+    font-size: 20pt
+
+#content
+    width: 1400px
+    min-height: 100vh
+    max-width: 90%
+    margin: 0 auto
+
+
+#topbar_wrapper
+    height: 160px
+    margin: 0 auto
+    padding: 0
+    color: $lightGreen
+    background-color: $darkGrey
+    display: flex
+
+#logo_img
+    height: 110px
+    align-self: center
+    margin-left: 30px
+
+#logo_text
+
+    align-self: center
+    margin-left: 30px
+
+    h1
+        font-family: NimbusRoman, TimesNewRoman, cursive
+        font-style: italic
+        font-size: 40pt
+        margin: 0
+
+    h2
+        font-size: 22pt
+        padding-top: 10px
+        margin: 0
+        color: $whiteText
+
+    h3
+        display: none
+        color: $whiteText
+        margin: 0
+        font-size: 20pt
+
+
+        span
+            color: $lightGreen
+            font-family: NimbusRoman, TimesNewRoman, cursive
+
+#banner_wrapper
+    width: 100%
+    height: 420px
+    background-image: url('../img/banner1.jpg')
+    background-position: center
+
+.text
+    color: $darkOrange
+    width: 70%
+    margin-left: 15%
+    margin-top: 100px
+
+
+#navbar_wrapper
+    height: 35px
+    width: 100%
+    display: flex
+    align-self: flex-end
+    justify-content: flex-end
+    margin: 0 50px 20px 0
+
+.navbar_item
+    text-decoration: none
+    color: $whiteText
+    margin: 0 10px
+    outline: none
+    border: transparent solid 3px
+    padding: 2px
+    transition: color 200ms
+
+    svg
+        width: 27px
+        height: 27px
+
+        path
+            fill: $whiteText
+            transition: fill 200ms
+
+    &:focus, &:hover
+        color: $lightGreen
+        transition: color 200ms
+
+        svg
+            path
+                fill: $lightGreen
+                transition: fill 200ms
+
+
+
+.active
+    color: $lightGreen
+    svg
+        path
+            fill: $lightGreen
+
+.navbar_icon
+    width: 26px
+
+
+
+.grid_container
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: 400px 400px 400px auto
+    width: 100%
+
+.grid_item
+    width: 100%
+    height: 100%
+
+
+.grid_item_text
+    text-align: center
+
+    h1
+        font-size: 32pt
+        margin: 0
+        padding-bottom: 8px
+    p
+        margin: 0
+
+.grid_item_image
+    background-color: $lightGreen
+
+
+#image_1
+    background-image: url('../img/kasten1.jpg')
+    background-size: cover
+
+#image_2
+    background-image: url('../img/kasten2.jpg')
+    background-size: cover
+
+#image_3
+    background-image: url('../img/kasten3.jpg')
+    background-size: cover
+
+
+.btn_wrapper
+    padding-top: 32px
+
+.btn
+    text-decoration: none
+    color: $darkText
+    border: $darkBrown 3px solid
+    padding: 8px 16px
+    font-weight: 600
+    text-transform: uppercase
+    transition: background-color 300ms, color 300ms
+    font-size: 18pt
+
+    &:focus, &:hover
+        background-color: $darkBrown
+        transition: background-color 300ms, color 300ms
+        color: $whiteText
+
+.text_wrapper
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+
+#footer
+    width: 100%
+    height: 220px
+    background-color: $darkGrey
+
+.footer_links
+    width: 100%
+    display: flex
+    padding-top: 34px
+    justify-content: center
+
+
+.footer_links_item
+
+    a
+        text-decoration: none
+        color: $whiteText
+        transition: color 200ms
+
+        &:focus, &:hover
+            color: $lightGreen
+            transition: color 200ms
+
+    ::after
+        content: ' | '
+        color: $lightGrey
+        padding: 0 10px
+
+.no_after
+    ::after
+        content: '' !important
+
+.footer_sm
+    width: 100%
+    display: flex
+    padding-top: 28px
+    justify-content: center
+
+
+.footer_sm_item
+
+    a
+        color: $whiteText
+        text-decoration: none
+
+        svg
+            width: 40px
+            height: 40px
+            position: relative
+            top: 7px
+
+            transition: transform 200ms
+
+        &:hover, &:focus
+
+            svg
+                transform: scale(1.2)
+                transition: transform 200ms
+
+    ::after
+        content: ' | '
+        color: $lightGrey
+        padding: 0 14px
+
+
+#footer_copyright
+    color: $lightGreen
+    text-align: center
+
+// Für Instagram SVG
+.st0
+    fill: url(#SVGID_1_)
+.st1
+    fill: #FFFFFF
+
+// Für Google SVG
+.st3
+    fill: #4285F4
+.st4
+    fill: #FFFFFF
+
+
+#mobile_navbar_btn
+    z-index: 101
+    position: absolute
+    height: $mobileNavbarHeight
+    display: none
+    cursor: pointer
+
+
+    img
+        width: 28px
+        height: 28px
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        left: 20px
+
+
+#mobile_navbar_wrapper
+    width: 100%
+    position: fixed
+    top: 0
+    background-color: $darkGrey
+    text-align: center
+    z-index: 100
+    padding: 30px 0
+    transform: translateY(-100%)
+    transition: transform 300ms
+
+    div
+        margin: 12px 0
+
+
+.show
+    transform: translateY(0) !important
+    transition: transform 300ms
+
+
+.mobile_navbar_item
+    width: 100%
+    padding: 0 100px
+    text-decoration: none
+    color: $whiteText
+
+    &:focus, &:hover
+        color: $lightGreen
+        transition: color 200ms
+
+
+#mobile_footer
+    display: none
+    background-color: $darkGrey
+    text-align: center
+
+.mobile_footer_links
+    padding-top: 16px
+
+
+.mobile_footer_links_item
+
+    padding: 4px 0
+    font-size: 16pt
+
+    a
+        color: $whiteText
+        text-decoration: none
+
+
+.mobile_footer_sm
+    width: 100%
+    display: flex
+    padding-top: 28px
+    justify-content: center
+
+.mobile_footer_sm_item
+
+    a
+        color: $whiteText
+        text-decoration: none
+
+        svg
+            width: 40px
+            height: 40px
+            position: relative
+            top: 7px
+
+            transition: transform 200ms
+
+        &:hover, &:focus
+
+            svg
+                transform: scale(1.2)
+                transition: transform 200ms
+
+#mobile_footer_copyright
+    color: $lightGreen
+    font-size: 18pt
+    margin-bottom: 0
+    padding-bottom: 10px
+
+
+@media only screen and (max-width: 1200px)
+
+    #mobile_footer
+        display: block
+
+    #footer
+        display: none
+
+    #content
+        width: 100%
+        max-width: 100%
+
+    #banner_wrapper
+        height: 180px
+
+    #topbar_wrapper
+        height: $mobileNavbarHeight
+
+    #logo_img
+        height: 38px
+        margin-left: 70px
+
+    #logo_text
+        margin-left: 12px
+        padding-top: 5px
+
+        h1, h2
+            display: none
+
+        h3
+            display: block
+
+
+    #mobile_navbar_btn
+        display: block
+
+    #navbar_wrapper
+        display: none
+
+    .grid_container
+        grid-template-columns: 100%
+        grid-template-rows: auto 300px auto 300px auto 300px auto
+
+    .grid_item_text
+        padding: 16px 0
+
+        p
+            padding: 0 16px
+            padding-bottom: 24px
+
+        .btn_wrapper
+            padding-bottom: 30px
+
+    .grid_item:nth-of-type(1)
+        order: 1
+
+    .grid_item:nth-of-type(2)
+        order: 2
+
+    .grid_item:nth-of-type(3)
+        order: 4
+
+    .grid_item:nth-of-type(4)
+        order: 3
+
+    .grid_item:nth-of-type(5)
+        order: 5
+
+    .grid_item:nth-of-type(6)
+        order: 6
